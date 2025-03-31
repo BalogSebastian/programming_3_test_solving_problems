@@ -1,6 +1,8 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,6 +17,16 @@ public class Main {
 
         list1.stream()
                 .map(x -> {if ( x % 2 == 0) return x + 1; else return x;}).forEach(System.out::println);
+
+        List<Integer> transformedList = list1.stream()
+                .map(x -> (x % 2 == 0) ? x * x : x)
+                .collect(Collectors.toList());
+
+        System.out.println(transformedList);
+
+        System.out.println("páros számok");
+        list1.stream()
+                .filter(x -> x%2==0).forEach(System.out::println);
 
 
     }

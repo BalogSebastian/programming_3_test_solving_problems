@@ -11,7 +11,7 @@ public class Main {
         list1.add(3);
         list1.add(4);
 
-        
+        list1.stream().map(x -> x +1 ).forEach(System.out::println);
 
 
     }

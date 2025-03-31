@@ -13,6 +13,9 @@ public class Main {
 
         list1.stream().map(x -> x +1 ).forEach(System.out::println);
 
+        list1.stream()
+                .map(x -> {if ( x % 2 == 0) return x + 1; else return x;}).forEach(System.out::println);
+
 
     }
 }

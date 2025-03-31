@@ -28,6 +28,18 @@ public class Main {
         list1.stream()
                 .filter(x -> x%2==0).forEach(System.out::println);
 
+        ArrayList<Integer> list2 = new ArrayList<>();
+        list2.add(4);
+        list2.add(5);
+        list2.add(6);
+        list2.add(7);
+        list2.add(8);
+
+        list2.stream()
+                .filter(x -> x > 5)
+                .forEach(System.out::println);
+
+        
 
     }
 }
